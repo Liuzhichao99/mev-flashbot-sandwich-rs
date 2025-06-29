@@ -1,22 +1,22 @@
-# mev-flashbot-sandwich-rs
+# MEV-Flashbot-Sandwich-RS
 ## 项目介绍
-mev-bot 是一个基于 Rust 编写的 高性能以太坊 MEV（三明治攻击）机器人。
+mev-bot 是一个基于 Rust 编写的 **高性能以太坊 MEV（三明治攻击）机器人**。
 该项目通过监听以太坊 mempool 中的 pending 交易，捕捉高滑点交易机会，构建前后插队交易（sandwich attack），并通过 Flashbots 中继器私下提交交易 bundle，从而实现链上套利或抢跑收益。
 
-该机器人设计目标是低延迟、高可靠性、易扩展、可控风险，适用于研究 MEV 策略、性能优化或主网上实盘测试。
+该机器人设计目标是**低延迟、高可靠性、易扩展、可控风险**，适用于研究 MEV 策略、性能优化或主网上实盘测试。
 
 ## 技术栈
-🦀 Rust：安全、高性能、无 GC 停顿，适合编写交易型机器人
+- **Rust**：安全、高性能、无 GC 停顿，适合编写交易型机器人
 
-⚙️ Tokio：Rust 的异步运行时，用于高并发事件监听与处理
+- **Tokio**：Rust 的异步运行时，用于高并发事件监听与处理
 
-🔌 ethers-rs：以太坊交互库，支持 RPC/WebSocket、多签名、合约调用等
+- **ethers-rs**：以太坊交互库，支持 RPC/WebSocket、多签名、合约调用等
 
-📡 WebSocket：用于实时监听 pending tx，提升响应速度
+- **WebSocket**：用于实时监听 pending tx，提升响应速度
 
-⚡ Flashbots RPC：通过 Flashbots 提交私密交易 bundle，避免抢跑
+- **Flashbots** RPC：通过 Flashbots 提交私密交易 bundle，避免抢跑
 
-🔐 环境配置：使用 AES-GCM 对私钥加密存储，结合 .env 文件或配置文件安全加载 RPC 和私钥参数
+- **环境配置**：使用 AES-GCM 对私钥加密存储，结合 .env 文件或配置文件安全加载 RPC 和私钥参数
 
 ## 项目结构
 ```plaintext
