@@ -1,5 +1,6 @@
 # mev-flashbot-sandwich-rs
-
+项目结构
+```plaintext
 mev-bot/
 ├── Cargo.toml
 └── src/
@@ -7,3 +8,4 @@ mev-bot/
     ├── mev.rs        // 核心逻辑（如三明治、套利）
     ├── mempool.rs    // pending tx 监听
     └── tx_sender.rs  // 发送交易（包含 Flashbots）
+```
